@@ -1,0 +1,9 @@
+Django==5.1.15
+gunicorn==23.0.0
+whitenoise==6.8.2
+python-dotenv==1.2.3
+pypdf==6.19.0
+docx2txt==0.9
+numpy==2.4.6
+fastembed==0.8.1
+google-genai==2.25.0

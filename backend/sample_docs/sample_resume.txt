@@ -1,0 +1,47 @@
+AARAV MEHTA
+Pune, India | aarav.mehta@example.com | github.com/aarav-demo | linkedin.com/in/aarav-demo
+
+PROFESSIONAL SUMMARY
+Final-year Computer Engineering student passionate about machine learning and building web applications. Hands-on experience training NLP models, building REST APIs with Django and creating responsive frontends with React.
+
+EDUCATION
+B.E. in Computer Engineering, Savitribai Phule Pune University, 2022 - 2026. CGPA: 8.6 / 10.
+Relevant coursework: Machine Learning, Data Structures and Algorithms, Database Management Systems, Operating Systems, Cloud Computing.
+
+TECHNICAL SKILLS
+Languages: Python, JavaScript, SQL, C++
+Machine Learning: scikit-learn, PyTorch, Pandas, NumPy, Hugging Face Transformers
+Web Development: Django, Django REST Framework, React, HTML, CSS
+Databases: PostgreSQL, MySQL
+Tools: Git, GitHub, Docker (basic), VS Code, Jupyter Notebook, Postman
+
+EXPERIENCE
+Machine Learning Intern, DataSpark Solutions, Pune (June 2025 - August 2025)
+- Built a customer review sentiment classifier using a fine-tuned DistilBERT model, reaching 91% accuracy on 20,000 reviews.
+- Cleaned and prepared datasets with Pandas, reducing data preparation time by 40% through reusable scripts.
+- Deployed the model as a Django REST API used by the internal analytics dashboard.
+- Presented weekly progress to the team lead and documented the project in Confluence.
+
+Web Development Intern, CodeCraft Studio, Remote (December 2024 - February 2025)
+- Developed 6 reusable React components for a client booking portal.
+- Integrated REST APIs and improved page load time by 25% using lazy loading.
+
+PROJECTS
+Fake News Detector
+- Trained a Logistic Regression and LSTM model on 40,000 news articles using TF-IDF and word embeddings; best F1-score 0.89.
+- Built a Streamlit interface where users paste an article and receive a prediction with confidence.
+
+Smart Expense Tracker
+- Full-stack web app using React, Django and PostgreSQL with login, monthly charts and CSV export.
+- Containerized the application with Docker for consistent local setup.
+
+Movie Recommendation System
+- Content-based recommender using cosine similarity on movie metadata for 5,000 films.
+
+CERTIFICATIONS
+- Machine Learning Specialization (online course), 2024
+- Python for Data Science, 2023
+
+ACHIEVEMENTS AND ACTIVITIES
+- Finalist, college hackathon 2025, built an AI study planner in 24 hours with a team of four.
+- Technical lead of the college coding club; organised 5 workshops on Python and Git for 200+ students.

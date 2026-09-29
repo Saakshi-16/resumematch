@@ -1,0 +1,9 @@
+**/node_modules
+**/dist
+**/__pycache__
+**/*.pyc
+backend/.env
+backend/storage
+backend/model_cache
+.git
+.vscode

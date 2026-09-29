@@ -1,0 +1,34 @@
+Junior AI/ML Engineer - Nimbus Analytics (Bengaluru, Hybrid)
+
+About the role
+Nimbus Analytics builds AI assistants that help insurance and banking companies answer customer questions from their documents. We are hiring a Junior AI/ML Engineer to join our GenAI team and help build Retrieval-Augmented Generation (RAG) applications used by thousands of customers.
+
+Responsibilities
+- Build and improve RAG pipelines: document parsing, chunking, embeddings and retrieval.
+- Integrate large language models (LLMs) such as GPT, Gemini or Llama into production services.
+- Develop backend REST APIs in Python (Django or FastAPI).
+- Store and search embeddings using vector databases such as FAISS, Pinecone or ChromaDB.
+- Evaluate model quality using metrics and test datasets, and improve accuracy over time.
+- Containerize services with Docker and deploy them on AWS (EC2, S3, Lambda).
+- Collaborate with product managers and explain technical results clearly to non-technical teams.
+
+Required qualifications
+- Bachelor's degree in Computer Science, Engineering or a related field (2025 or 2026 graduates welcome).
+- Strong programming skills in Python.
+- Solid understanding of machine learning fundamentals and NLP.
+- Hands-on experience with at least one deep learning framework such as PyTorch or TensorFlow.
+- Experience building REST APIs.
+- Working knowledge of SQL and relational databases.
+- Familiarity with Git and collaborative development.
+- Experience with Docker.
+- Good communication and teamwork skills.
+
+Preferred qualifications (nice to have)
+- Hands-on experience with LLMs, prompt engineering or RAG.
+- Experience with vector databases (FAISS, Pinecone, ChromaDB).
+- Experience deploying applications on AWS or another cloud platform.
+- Knowledge of Kubernetes or MLOps tools such as MLflow.
+- Basic frontend skills in React.
+
+What we offer
+Mentorship from senior engineers, a learning budget, flexible hybrid work and the chance to ship AI products used by real customers.
