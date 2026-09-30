@@ -12,6 +12,34 @@ const STEPS = [
   "Hallucination check & scoring",
 ];
 
+const OK_TYPES = [".pdf", ".docx", ".txt", ".md"];
+
+// Upload box: click to choose a file OR drag & drop a file onto it
+function DropZone({ file, onFile, icon, onError }) {
+  const [over, setOver] = useState(false);
+  function pick(f) {
+    if (!f) return;
+    if (!OK_TYPES.some((t) => f.name.toLowerCase().endsWith(t))) {
+      onError("Please use a PDF, DOCX or TXT file.");
+      return;
+    }
+    onError("");
+    onFile(f);
+  }
+  return (
+    <label
+      className={over ? "dropzone over" : "dropzone"}
+      onDragOver={(e) => { e.preventDefault(); setOver(true); }}
+      onDragLeave={() => setOver(false)}
+      onDrop={(e) => { e.preventDefault(); setOver(false); pick(e.dataTransfer.files[0]); }}
+    >
+      <input type="file" accept=".pdf,.docx,.txt,.md" onChange={(e) => pick(e.target.files[0])} />
+      <span className="drop-icon">{icon}</span>
+      <span>{file ? file.name : "Drag & drop a PDF, DOCX or TXT file here, or click to choose"}</span>
+    </label>
+  );
+}
+
 export default function Analyze() {
   const navigate = useNavigate();
   const [resume, setResume] = useState(null);
@@ -22,6 +50,17 @@ export default function Analyze() {
   const [step, setStep] = useState(0);
   const [error, setError] = useState("");
   const [health, setHealth] = useState(null);
+
+  // Stop the browser from opening a file if it is dropped outside the upload boxes
+  useEffect(() => {
+    const stop = (e) => e.preventDefault();
+    window.addEventListener("dragover", stop);
+    window.addEventListener("drop", stop);
+    return () => {
+      window.removeEventListener("dragover", stop);
+      window.removeEventListener("drop", stop);
+    };
+  }, []);
 
   useEffect(() => {
     getJSON("/api/health/").then(setHealth).catch(() => {});
@@ -89,11 +128,7 @@ export default function Analyze() {
       <div className="grid-2">
         <div className="card">
           <h3>1. Resume</h3>
-          <label className="dropzone">
-            <input type="file" accept=".pdf,.docx,.txt,.md" onChange={(e) => setResume(e.target.files[0] || null)} />
-            <span className="drop-icon">📄</span>
-            <span>{resume ? resume.name : "Click to choose a PDF, DOCX or TXT file"}</span>
-          </label>
+          <DropZone file={resume} onFile={setResume} icon="📄" onError={setError} />
         </div>
 
         <div className="card">
@@ -105,11 +140,7 @@ export default function Analyze() {
           {jdMode === "paste" ? (
             <textarea rows="8" placeholder="Paste the full job description here…" value={jdText} onChange={(e) => setJdText(e.target.value)} />
           ) : (
-            <label className="dropzone">
-              <input type="file" accept=".pdf,.docx,.txt,.md" onChange={(e) => setJdFile(e.target.files[0] || null)} />
-              <span className="drop-icon">🧾</span>
-              <span>{jdFile ? jdFile.name : "Click to choose a PDF, DOCX or TXT file"}</span>
-            </label>
+            <DropZone file={jdFile} onFile={setJdFile} icon="🧾" onError={setError} />
           )}
         </div>
       </div>
